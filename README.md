@@ -1,8 +1,8 @@
 
-Gulp Styledown
+gulp-syledown [WIP]
 ===
 
-styledown plugin for gulp
+Styledown middleware for gulp
 
 
 Quick Start
@@ -22,4 +22,10 @@ gulp.src('/path/to/styledown/*.md')
 Options
 ---
 
-- config : Path for config.md
+- config : Path to config.md
+- filename : Path to output html
+
+
+LICENSE
+---
+(WTFPL)
