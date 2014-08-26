@@ -1,0 +1,23 @@
+{
+  "name": "gulp-styledown",
+  "version": "0.0.0",
+  "description": "Gulp Styledown task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "styledown"
+  ],
+  "author": "Hiroyuki SATAKE <st44100@gmail.com>",
+  "license": "WTFPL",
+  "dependencies": {
+    "bufferstreams": "0.0.2",
+    "gulp-util": "^3.0.0",
+    "merge": "^1.1.3",
+    "stream": "0.0.1",
+    "styledown": "^1.0.0",
+    "through2": "^0.6.1"
+  }
+}
