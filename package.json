@@ -1,21 +1,42 @@
 {
   "name": "gulp-styledown",
   "version": "0.0.0",
-  "description": "Gulp Styledown task",
+  "description": "Gulp Styledown Plugin",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "keywords": [
     "gulp",
-    "styledown"
+    "gulpplugin",
+    "styledown",
+    "styleguide"
   ],
-  "author": "Hiroyuki SATAKE <st44100@gmail.com>",
+  "author": "st44100 <st44100@gmail.com>",
   "license": "WTFPL",
   "dependencies": {
     "gulp-util": "^3.0.0",
     "merge": "^1.1.3",
     "styledown": "^1.0.0",
-    "through": "^2.3.4"
-  }
+    "through": "^2.3.4",
+    "through2": "^0.6.1"
+  },
+  "_shasum": "01e407a26e29b9a72dc4145ab75316b221dd3451",
+  "_resolved": "git://github.com/st44100/gulp-styledown.git#7f9095abe7169697a0a30894ee3b33523e16d84d",
+  "_from": "gulp-styledown@git://github.com/st44100/gulp-styledown.git",
+  "devDependencies": {
+    "mocha": "^1.21.4",
+    "should": "^4.0.4"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/st44100/gulp-styledown.git"
+  },
+  "bugs": {
+    "url": "https://github.com/st44100/gulp-styledown/issues"
+  },
+  "homepage": "https://github.com/st44100/gulp-styledown"
 }

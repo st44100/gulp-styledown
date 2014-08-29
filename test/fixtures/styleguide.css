@@ -1,0 +1,22 @@
+/**
+ * Button:
+ * Create your buttons with a `.button` class.
+ * 
+ *     @example
+ *     <a class="button">Button</a>
+ *     <a class="button primary">Button</a>
+ */
+
+.button {
+  width: 100px;
+  height: 40px;
+  border: solid 2px black;
+  color: blue;
+}
+
+.button .primary {
+  width: 100px;
+  height: 40px;
+  border: solid 2px black;
+  color: green;
+}
