@@ -15,9 +15,9 @@ function gulpStyledown(opt) {
   var enc = 'utf8'
   var srcFiles = [];
   var inlineMode = false;
-  opt = merge(opt, {
+  opt = merge({
     filename: 'styleguide.html'
-  });
+  },opt);
   function transform(file, encodeing, callback) {
     if (file.isNull()) {
       return callback(null, file);
