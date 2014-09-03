@@ -4,6 +4,10 @@ gulp-styledown
 
 Styledown plugin for gulp
 
+[![Build Status](https://drone.io/github.com/st44100/gulp-styledown/status.png)](https://drone.io/github.com/st44100/gulp-styledown/latest)
+
+
+
 
 Quick Start
 ---
@@ -25,3 +29,4 @@ Options
 - config : Path to config.md
 - filename : Path to output html
 
+Other options are pass to [styledown](https://github.com/styledown/styledown).
