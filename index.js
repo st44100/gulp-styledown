@@ -4,26 +4,29 @@ var styledown = require('styledown');
 var PluginError = gutil.PluginError;
 var path = require('path');
 var fs = require('fs');
+var merge = require('merge');
 var File = gutil.File;
 
-// consts
 const PLUGIN_NAME = 'gulp-styledown';
 
 function gulpStyledown(opt) {
   'use strict';
   var firstFile = null;
-  var enc = "utf8"
+  var enc = 'utf8'
   var srcFiles = [];
   var inlineMode = false;
-
+  opt = merge(opt, {
+    filename: 'styleguide.html'
+  });
   function transform(file, encodeing, callback) {
     if (file.isNull()) {
       return callback(null, file);
     }
 
     if (file.isStream()) {
-      return callback(new PluginError('gulp-styledown',  'Streaming not supported'));
+      return callback(new PluginError(PLUGIN_NAME,  'Streaming not supported'));
     }
+
     if (!firstFile) {
       firstFile = file;
       enc = encodeing || enc;
@@ -40,9 +43,6 @@ function gulpStyledown(opt) {
 
     var data;
 
-    if (!opt ) {
-      opt = {};
-    }
     if (opt.config) {
       //TODO: Error Check
       srcFiles.push({
@@ -50,16 +50,15 @@ function gulpStyledown(opt) {
         data: fs.readFileSync(opt.config, enc)
       });
     }
-    if (!opt.filename) { opt.filename = 'styleguide.html';}
 
     try {
       data = styledown.parse(srcFiles, opt)
     } catch (err) {
-      return callback(new PluginError('gulp-styledown',  'Fail to parse'));
+      return callback(new PluginError(PLUGIN_NAME, 'Fail to parse'));
     }
 
     var output = new File({
-      path: path.join(firstFile.cwd, opt.filename || 'index.html'),
+      path: path.join(firstFile.cwd, opt.filename),
     });
     
     if (data) {

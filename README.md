@@ -2,7 +2,7 @@
 gulp-styledown
 ===
 
-Styledown plugin for gulp
+A gulp plugin for Styledown.
 
 [![Build Status](https://drone.io/github.com/st44100/gulp-styledown/status.png)](https://drone.io/github.com/st44100/gulp-styledown/latest)
 
