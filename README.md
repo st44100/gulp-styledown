@@ -17,11 +17,11 @@ Quick Start
 var styledown = require('gulp-styledown');
 
 gulp.src('/path/to/styledown/*.md')
-.pipe(styldown({
+.pipe(styledown({
   config: '/path/to/config.md'
   filename: 'output.html'
 }))
-.pipe.dest('paht/to/');
+.pipe(gulp.dest('/path/to/'));
 ```
 
 Options
